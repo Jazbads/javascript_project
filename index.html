@@ -1,10 +1,37 @@
 <!DOCTYPE html>
-<html>
-<body>
-
-<h1>My First Heading</h1>
-
-<p>My first paragraph.</p>
-
-</body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function greeting(){
+          let name=prompt("Please input your name:")
+          window.alert('Hello '+name);
+          document.getElementById('demo').innerHTML = 'Hello '+name;
+        }
+        function changeToblue(){
+          document.getElementById('demo').style.color="blue";
+          document.getElementById('demo').style.fontSize="30px";
+        }
+        function changeToDog(){
+          document.getElementById('pic').src="dog.jpg";
+        }
+        function changeToCat(){
+          document.getElementById('pic').src="cat.jpg";
+        }
+    </script>
+</head>
+    <body>
+        <h2>My Lover pet</h2>
+        <img id="pic" src="cat.jpg" width="600" height="400"><br>
+        <button type="button" onclick="changeToDog()">Dog</button>
+        <button type="button" onclick="changeToCat()">Cat</button>
+        <button type="button" onclick="greeting()">
+        Click me to greeting.</button>
+        <button type="button" onclick="changeToblue()">
+            Click me to display color of text.</button>
+        <p id="demo"></p>
+    </body>
 </html>

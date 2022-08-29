@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="showProduct(proDuct)">Click me to Show Product</button>
+
+
+<p id="demo"></p>
+
+<script>
+const proDuct =[
+        {id:'01',name:'Pearlwood Sword',price:'1$',img:'https://static.wikia.nocookie.net/terraria_gamepedia/images/9/98/Night%27s_Edge.png'},
+        {id:'02',name:'Star Wrath',price:'2$',img:'https://static.wikia.nocookie.net/terraria_gamepedia/images/8/83/Star_Wrath.png'},
+        {id:'03',name:'Influx Waver',price:'3$',img:'https://static.wikia.nocookie.net/terraria_gamepedia/images/d/d2/Influx_Waver.png'},
+        {id:'04',name:'Terra Blade',price:'4$',img:'https://static.wikia.nocookie.net/terraria_gamepedia/images/4/4d/Terra_Blade.png'},
+        {id:'05',name:'Starlight',price:'5$',img:'https://static.wikia.nocookie.net/terraria_gamepedia/images/1/15/Starlight.png'},
+        {id:'06',name:'Ice Sickle',price:'6$',img:'https://static.wikia.nocookie.net/terraria_gamepedia/images/e/ea/Ice_Sickle.png'},
+        {id:'07',name:'Meowmere',price:'7$',img:'https://static.wikia.nocookie.net/terraria_gamepedia/images/6/63/Meowmere.png'},
+        {id:'08',name:'Excalibur',price:'8$',img:'https://static.wikia.nocookie.net/terraria_gamepedia/images/f/fa/Excalibur.png'},
+        {id:'09',name:'Muramasa',price:'9$',img:'https://static.wikia.nocookie.net/terraria_gamepedia/images/c/c2/Muramasa.png'},
+        {id:'10',name:'Bee Keeper',price:'10$',img:'https://static.wikia.nocookie.net/terraria_gamepedia/images/4/42/Bee_Keeper.png'},
+    ]
+
+let text = "<ul>";
+let x = document.getElementById("demo")
+proDuct.forEach(showProduct);
+x.innerHTML = text;
+
+function showProduct(value) {
+            text += `<li>ID: ${value.id} <br>Name: ${value.name} <br>Price: ${value.price} <br> <img src=${value.img} style="width:40px;height:40px;"></li>`
+            
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        } 
+
+
+</script>
+
+</body>
+</html>
